@@ -1,0 +1,26 @@
+{
+  "name": "sequilize-batch4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js",
+    "migration": "npx sequelize-cli model:generate --models-path ./src/models --migrations-path ./src/migrations --name '%npm_config_table%' --attributes '%npm_config_attributes%'",
+    "migrate": "npx sequelize-cli db:migrate --config ./src/config/config.json --migrations-path ./src/migrations",
+    "make:seeder": "npx sequelize-cli seed:generate --seeders-path ./src/seeders --name %npm_config_filename%",
+    "seeder": "npx sequelize-cli --config ./src/config/config.json --seeders-path ./src/seeders db:seed --seed %npm_config_filename%"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "mysql2": "^3.9.7",
+    "nodemon": "^3.1.0",
+    "sequelize": "^6.37.3",
+    "sequelize-cli": "^6.6.2"
+  }
+}
