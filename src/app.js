@@ -1,13 +1,13 @@
 const express = require("express");
-const bodyParser = require("body-parser");
+// const bodyParser = require("body-parser");
 // const globalMiddleware = require("./middlewares/globalMiddleware");
 const app = express();
-const port = 3000;
+const port = 9000;
 
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
 // sanity check
 // app.use(globalMiddleware());
