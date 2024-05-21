@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 // app.use(bodyParser.json());
 
 if (env.NODE_ENV === "development") {
-  app.use("/api-docs", swagger);
+  app.use("/tugas-wahana", swagger);
 }
 
 // sanity check
